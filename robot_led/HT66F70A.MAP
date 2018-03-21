@@ -1,0 +1,202 @@
+
+Linker Version 8.7.3.170508
+Input Object File: C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ
+Input Object File: C:\Users\SA\Desktop\robot_led\STARTUP1_L.OBJ
+Input Object File: C:\Users\SA\Desktop\robot_led\UART.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0002h     003eh    003dh      CODE               @start (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     003fh     0069h    002bh      CODE               @crom (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     006ah     007ah    0011h      CODE               _shock (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     007bh     00ach    0032h      CODE               _LED9 (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     00adh     00c1h    0015h      CODE               _LED4 (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     00c2h     00d1h    0010h      CODE               _clear (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     00d2h     00dbh    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00dch     00fbh    0020h      CODE               _PC_RX (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     00fch     011ch    0021h      CODE               _PC_TX (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     011dh     012ah    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     012bh     0141h    0017h      CODE               _tx_string (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     0142h     014fh    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0150h     0164h    0015h      CODE               _Delayms (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0165h     0183h    001fh      CODE               _LED_init (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0184h     0189h    0006h      CODE               _UART_init (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     018ah     01d9h    0050h      CODE               _main (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     01dah     01e0h    0007h      CODE               @ROMDATA_BASE (C:\Users\SA\Desktop\robot_led\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     24        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     17        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     17        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008bh     008ch    0002h      DATA     0         @HCCINIT_f (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     008dh     008eh    0002h      DATA     0         @HCCINIT_g (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     008fh     0092h    0004h      DATA     0         @HCCINIT_output1 (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0093h     0098h    0006h      DATA     1.8333    @HCCINIT0_string (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0099h     00cah    0032h      DATA     0         @HCCINIT0_output (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0089h     008ah    0002h      LOCAL    4         _main (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _UART_init (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _LED_init (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0084h     0085h    0002h      LOCAL    5         _Delayms (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0083h     0083h    0001h      LOCAL    2         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0088h    0005h      LOCAL    3.8       _tx_string (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0083h     0083h    0001h      LOCAL    4         _PC_TX (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0000h      LOCAL    0         _PC_RX (C:\Users\SA\Desktop\robot_led\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _clear (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _LED4 (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _LED9 (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _shock (C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     011dh              _Crom2Prom
+     011dh              _Crom2PromNext
+     0150h              _Delayms
+     0084h              _Delayms_2
+     00adh              _LED4
+     007bh              _LED9
+     0165h              _LED_init
+     00dch              _PC_RX
+     00fch              _PC_TX
+     0184h              _UART_init
+     00d5h              __DELAYX0
+     00d4h              __DELAYX1
+     00d4h              __DELAYX2
+     00d3h              __DELAYX3
+     00d3h              __DELAYX4
+     00d2h              __DELAYX5
+     00d2h              __DELAYX6
+     0144h              __DELAYY0_isr00
+     0144h              __DELAYY1_isr00
+     0143h              __DELAYY2_isr00
+     0143h              __DELAYY3_isr00
+     0142h              __DELAYY4_isr00
+     0142h              __DELAYY5_isr00
+     00c2h              _clear
+     008bh              _f
+     008dh              _g
+     018ah              _main
+     0099h              _output
+     008fh              _output1
+     006ah              _shock
+     0093h              _string
+     012bh              _tx_string
+     0086h              _tx_string_2
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     01dah              startup_value_1
+
+     Address            Public by Value
+     006ah              _shock
+     007bh              _LED9
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0084h              _Delayms_2
+     0086h              _tx_string_2
+     008bh              _f
+     008dh              _g
+     008fh              _output1
+     0093h              _string
+     0099h              _output
+     00adh              _LED4
+     00c2h              _clear
+     00d2h              __DELAYX6
+     00d2h              __DELAYX5
+     00d3h              __DELAYX4
+     00d3h              __DELAYX3
+     00d4h              __DELAYX2
+     00d4h              __DELAYX1
+     00d5h              __DELAYX0
+     00dch              _PC_RX
+     00fch              _PC_TX
+     011dh              _Crom2PromNext
+     011dh              _Crom2Prom
+     012bh              _tx_string
+     0142h              __DELAYY4_isr00
+     0142h              __DELAYY5_isr00
+     0143h              __DELAYY2_isr00
+     0143h              __DELAYY3_isr00
+     0144h              __DELAYY0_isr00
+     0144h              __DELAYY1_isr00
+     0150h              _Delayms
+     0165h              _LED_init
+     0184h              _UART_init
+     018ah              _main
+     01dah              startup_value_1
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     01e1h    5%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     Total     8000h     01e1h    1%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     004bh    58%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     Total     0800h     004bh    3%
+
+Use Stack Count
+_main: 3
+_rx_string: 2
+_rx_string_115200: 2
+_tx_string_115200: 2
+
+Call Tree
+    @dummy
+        _main (0)
+            _UART_init (1)
+            _LED_init (1)
+            _Delayms (1)
+                _builtin_holtek_delay_isr00 (2)
+            _tx_string (1)
+                _Crom2Prom (2)
+                _PC_TX (2)
+                    __DELAYX (3)
+            _PC_RX (1)
+                __DELAYX (2)
+            _clear (1)
+            _LED4 (1)
+            _LED9 (1)
+            _shock (1)
+    _rx_string
+        _PC_RX (0)
+            __DELAYX (1)
+    _rx_string_115200
+        _PC_RX_115200 (0)
+            __DELAYX (1)
+    _tx_string_115200
+        _Crom2Prom (0)
+        _PC_TX_115200 (0)
+            __DELAYX (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\SA\Desktop\robot_led\HT66F70A.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

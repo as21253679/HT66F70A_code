@@ -1,0 +1,609 @@
+				;file C:\Users\bet\Desktop\APP 紫外線版\UART.c
+				;1	#include <HT66F70A.h>
+				;2	//#define LED_Port  _pc								
+				;3	//#define LED_PortC _pcc	
+				;4	typedef	unsigned char	u8;
+				;5	typedef	char			s8;
+				;6	typedef	unsigned short	u16;
+				;7	typedef	short			s16;
+				;8	typedef	unsigned long	u32;
+				;9	typedef	long			s32;
+				;10	void PC_TX(char da);
+				;11	char PC_RX();
+				;12	void UART_init();
+				;13	
+				;14	extern char output[];
+				;15	char output1[4]={'0','1'};
+				;16	#define T2 205  //baudrate  9600=4M/4/T => T=104
+				;17	#define PE1_Rx  _pe0
+				;18	#define PE0_Tx  _pe1
+				;19	char output[50];
+				;20	void rx_string();
+				;21	void tx_string(char data[]);
+				;22	void GPIO_init();
+				;23	void Delay100us(u16);							//函式原型宣告
+				;24	char e[2];
+				;25	char kk;
+				;26	void main()
+				;27	{
+				@code .SECTION 'CODE'
+				include HT66F70A.inc
+0000	1F0B	clr     BP
+0001	2887	jmp     _main_startup1
+0002	0000	nop
+0003	0000	nop
+0004	0000	nop
+0005	0000	nop
+				L0006:
+0006	0000	nop
+				L0007:
+0007	0000	nop
+				L0008:
+0008	0000	nop
+0009	1785	sdz     ACC
+000A	2808	jmp     L0008
+000B	0003	ret
+				@start .SECTION 'CODE'
+				end_startup_value:
+00A7	0F00	mov     a, 0H
+00A8	008B	mov     BP, a
+00A9	28DF	jmp     _main
+				;28		_Bool stop = 0;
+				;29		UART_init();
+				_main:
+				_main:
+00DF	200C	call    _UART_init
+				;30		_wdtc=0b10101111;							//關閉看們狗計時器
+00E0	0FAF	mov     a, AFH
+00E1	00BE	mov     WDTC, a
+				;31	//	LED_PortC=0;	      						//設定LED_Port為輸出模式	   
+				;32		//_adcr0=0b00000001;							//選擇AN1做轉換,設定轉換結果存放格式
+				;33		_adcr0=0b00000001;
+00E2	0F01	mov     a, 1H
+00E3	00E8	mov     ADCR0, a
+				;34		_adcr1=0b00000110;							//A/D Clock=fSYS/64,VREFS=0
+00E4	0F06	mov     a, 6H
+00E5	00E9	mov     ADCR1, a
+				;35		_pas0=0b00110000;							//設定PA1為AN1 A/D通道
+00E6	0F30	mov     a, 30H
+00E7	80E0	lmov    PAS0, a
+				;36		_ade=1; _emi=1;		//啟動ADC中斷與中斷總開關 
+00E9	31B1	set     ADE
+00EA	3030	set     EMI
+				;37		_start=1; 
+00EB	33E8	set     START
+				;38		_start=0;	
+00EC	37E8	clr     START
+				;39			
+				;40		while(1)
+				;41		{
+				;42		//	kk=PC_RX();
+				;43		//	if(kk=='X')
+				;44			{
+				;45				_ade=1;
+				_L37:
+00ED	31B1	set     ADE
+				;46				Delay100us(1000);
+00EE	0FE8	mov     a, E8H
+00EF	4091	mov     da, a
+00F0	0F03	mov     a, 3H
+00F1	4092	mov     da[1], a
+00F2	20CB	call    _Delay100us
+				;47				PC_TX(e[1]);
+00F3	4718	mov     a, e[1]
+00F4	20AA	call    _PC_TX
+				;48				Delay100us(1000);
+00F5	0FE8	mov     a, E8H
+00F6	4091	mov     da, a
+00F7	0F03	mov     a, 3H
+00F8	4092	mov     da[1], a
+00F9	20CB	call    _Delay100us
+				;49				PC_TX(e[0]);
+00FA	4717	mov     a, e[0]
+00FB	20AA	call    _PC_TX
+				;50				Delay100us(1000);
+00FC	0FE8	mov     a, E8H
+00FD	4091	mov     da, a
+00FE	0F03	mov     a, 3H
+00FF	4092	mov     da[1], a
+0100	20CB	call    _Delay100us
+				;51				//PC_TX('A');
+				;52				Delay100us(1000);
+0101	0FE8	mov     a, E8H
+0102	4091	mov     da, a
+0103	0F03	mov     a, 3H
+0104	4092	mov     da[1], a
+0105	20CB	call    _Delay100us
+				;53			}
+				;54	//		else
+				;55			{
+				;56				//PC_TX('A');
+				;57				Delay100us(1000);
+0106	0FE8	mov     a, E8H
+0107	4091	mov     da, a
+0108	0F03	mov     a, 3H
+0109	4092	mov     da[1], a
+010A	20CB	call    _Delay100us
+010B	28ED	jmp     _L37
+010C	290C	jmp     $
+				L010D:
+010D	5F0F	clr     re1c[7]
+010E	7B8A	snz     re1c[2].7
+010F	2916	jmp     L0116
+0110	4189	cpl     re1c[1]
+0111	418A	cpl     re1c[2]
+0112	5489	inc     re1c[1]
+0113	3D0A	sz      Z
+0114	548A	inc     re1c[2]
+0115	558F	dec     re1c[7]
+				L0116:
+0116	7B8C	snz     re1c[4].7
+0117	291F	jmp     L011F
+0118	418B	cpl     re1c[3]
+0119	418C	cpl     re1c[4]
+011A	548B	inc     re1c[3]
+011B	3D0A	sz      Z
+011C	548C	inc     re1c[4]
+011D	548F	inc     re1c[7]
+011E	548F	inc     re1c[7]
+				L011F:
+011F	5F0D	clr     re1c[5]
+0120	5F0E	clr     re1c[6]
+0121	0F10	mov     a, 10H
+0122	4090	mov     re1c[8], a
+				L0123:
+0123	340A	clr     C
+0124	5A89	rlc     re1c[1]
+0125	5A8A	rlc     re1c[2]
+0126	5A8D	rlc     re1c[5]
+0127	5A8E	rlc     re1c[6]
+0128	470D	mov     a, re1c[5]
+0129	420B	sub     a, re1c[3]
+012A	470E	mov     a, re1c[6]
+012B	520C	sbc     a, re1c[4]
+012C	380A	snz     C
+012D	2933	jmp     L0133
+012E	408E	mov     re1c[6], a
+012F	470D	mov     a, re1c[5]
+0130	420B	sub     a, re1c[3]
+0131	408D	mov     re1c[5], a
+0132	5489	inc     re1c[1]
+				L0133:
+0133	5790	sdz     re1c[8]
+0134	2923	jmp     L0123
+0135	780F	snz     re1c[7].0
+0136	293C	jmp     L013C
+0137	418D	cpl     re1c[5]
+0138	418E	cpl     re1c[6]
+0139	548D	inc     re1c[5]
+013A	3D0A	sz      Z
+013B	548E	inc     re1c[6]
+				L013C:
+013C	788F	snz     re1c[7].1
+				@dummy .SECTION 'CODE'
+013D	2943	jmp     L0143
+013E	4189	cpl     re1c[1]
+013F	418A	cpl     re1c[2]
+0140	5489	inc     re1c[1]
+0141	3D0A	sz      Z
+0142	548A	inc     re1c[2]
+				L0143:
+0143	0003	ret
+				;58			}
+				;59		}
+				;60	}
+				;61	DEFINE_ISR(ISR_ADC,0x1C)
+				;62	{	
+				@ISR_ADC_code .SECTION 'CODE'
+001C	4083	mov     r11c, a
+001D	070B	mov     a, BP
+001E	1F0B	clr     BP
+001F	2820	jmp     _ISR_ADC
+				_ISR_ADC:
+				_ISR_ADC:
+				@dummy28 .SECTION 'CODE'
+0020	4084	mov     r21c, a
+0021	070A	mov     a, STATUS
+0022	40CC	mov     r31c, a
+				;63		int d=0,dd=0,ddd=0;
+				;64		_start=1; 
+0023	33E8	set     START
+				;65		_start=0;						//起始ADC轉換
+0024	37E8	clr     START
+				;66				
+				;67		d=~_adrh;
+0025	076B	mov     a, ADRH
+0026	4085	mov     rb1c, a
+0027	5F06	clr     rc1c
+0028	4185	cpl     rb1c
+0029	4186	cpl     rc1c
+				;68		d=0-(d<<2);
+002A	340A	clr     C
+002B	5A05	rlca    rb1c
+002C	4087	mov     rd1c, a
+002D	5A06	rlca    rc1c
+002E	4088	mov     re1c, a
+002F	340A	clr     C
+0030	5A87	rlc     rd1c
+0031	5A88	rlc     re1c
+003F	4707	mov     a, rd1c
+0040	4385	addm    a, rb1c
+0041	4708	mov     a, re1c
+0042	5386	adcm    a, rc1c
+				;69		dd=~_adrl;
+0032	076A	mov     a, ADRL
+0033	4085	mov     rb1c, a
+0034	5F06	clr     rc1c
+0035	4185	cpl     rb1c
+0036	4186	cpl     rc1c
+				;70		dd=0-(dd>>6);
+0037	0F06	mov     a, 6H
+				_LI1:
+0038	340A	clr     C
+0039	7F86	sz      rc1c.7
+003A	300A	set     C
+003B	5B86	rrc     rc1c
+003C	5B85	rrc     rb1c
+003D	1785	sdz     ACC
+003E	2838	jmp     _LI1
+				;71		ddd=d+dd;
+0043	0F00	mov     a, 0H
+0044	4285	subm    a, rb1c
+0045	0F00	mov     a, 0H
+0046	5286	sbcm    a, rc1c
+				;72		e[1]=ddd/100+48;
+0047	4705	mov     a, rb1c
+0048	4089	mov     re1c[1], a
+0049	4706	mov     a, rc1c
+004A	408A	mov     re1c[2], a
+004B	0F64	mov     a, 64H
+004C	408B	mov     re1c[3], a
+004D	0F00	mov     a, 0H
+004E	408C	mov     re1c[4], a
+004F	210D	call    L010D
+0050	4709	mov     a, re1c[1]
+0051	4087	mov     rd1c, a
+0052	470A	mov     a, re1c[2]
+0053	4088	mov     re1c, a
+0054	4707	mov     a, rd1c
+0055	0B30	add     a, 30H
+0056	4098	mov     e[1], a
+				;73		ddd=ddd-(ddd/100)*100;
+0057	4705	mov     a, rb1c
+0058	4089	mov     re1c[1], a
+0059	4706	mov     a, rc1c
+005A	408A	mov     re1c[2], a
+005B	0F64	mov     a, 64H
+005C	408B	mov     re1c[3], a
+005D	0F00	mov     a, 0H
+005E	408C	mov     re1c[4], a
+005F	210D	call    L010D
+0060	470D	mov     a, re1c[5]
+0061	4085	mov     rb1c, a
+0062	470E	mov     a, re1c[6]
+0063	4086	mov     rc1c, a
+				;74		if(ddd>=100)
+				;75			e[0]=52;
+				;76		else
+				;77			e[0]=ddd/10+48;
+0064	4705	mov     a, rb1c
+0065	4089	mov     re1c[1], a
+0066	4706	mov     a, rc1c
+0067	408A	mov     re1c[2], a
+0068	0F0A	mov     a, AH
+0069	408B	mov     re1c[3], a
+006A	0F00	mov     a, 0H
+006B	408C	mov     re1c[4], a
+006C	210D	call    L010D
+006D	4709	mov     a, re1c[1]
+006E	4085	mov     rb1c, a
+006F	470A	mov     a, re1c[2]
+0070	4086	mov     rc1c, a
+0071	4705	mov     a, rb1c
+0072	0B30	add     a, 30H
+0073	4097	mov     e[0], a
+				;78		_ade=0;
+0074	35B1	clr     ADE
+0075	4704	mov     a, r21c
+0076	008B	mov     BP, a
+0077	474C	mov     a, r31c
+0078	008A	mov     STATUS, a
+0079	4703	mov     a, r11c
+007A	0004	reti
+				startup_value:
+				@ROMDATA_BASE .SECTION 'CODE'
+007B	0004	reti
+007C	0093	mov     PAC, a
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+007D	3130	set     INT1E
+007E	0000	nop
+007F	0000	nop
+0080	0000	nop
+0081	0000	nop
+0082	0000	nop
+0083	0000	nop
+0084	0000	nop
+0085	0000	nop
+0086	0000	nop
+				;79	}
+				;80	void Delay100us(u16 del)						//延遲del*200指令週期
+				;81	{	u16 i,j;									//@fSYS=8MH,延遲del*100us
+				;82		for(i=0;i<del;i++)
+				_Delay100us:
+				_Delay100us:
+00CB	5F01	clr     rb
+00CC	5F02	clr     rc
+				_L3:
+00CD	4701	mov     a, rb
+00CE	4211	sub     a, del[0]
+00CF	4702	mov     a, rc
+00D0	5212	sbc     a, del[1]
+00D1	3F0A	sz      CZ
+00D2	28DE	jmp     _L2
+00D3	5F00	clr     ra
+00DA	5481	inc     rb
+00DB	3D0A	sz      Z
+00DC	5482	inc     rc
+00DD	28CD	jmp     _L3
+				_L2:
+00DE	0003	ret
+				;83			for(j=0;j<=25;j++) GCC_NOP();
+				_L6:
+00D4	0000	nop
+00D5	5480	inc     ra
+00D6	4700	mov     a, ra
+00D7	0A1A	sub     a, 1AH
+00D8	390A	snz     Z
+00D9	28D4	jmp     _L6
+				;84	}
+				;85	
+				;86	
+				;87	
+				;88	
+				;89	void Delayms(u16 del)
+				;90	{	
+				;91		u16 i;									//@fSYS=8MH,延遲del*1ms
+				;92		for(i=0;i<del;i++) GCC_DELAY(2000);		//內建函式，延遲2000指令週期
+				;93	}
+				;94	void GPIO_init()
+				;95	{
+				;96		//_pcpu1 = 1;		//  PC1 設定提升電阻
+				;97		//_pcc1 = 1;		//	PC1 設定輸入
+				;98	
+				;99	}
+				;100	
+				;101	void UART_init()
+				;102	{
+				;103		_pec1 = 0;	
+				_UART_init:
+				_UART_init:
+000C	34A3	clr     PEC1
+				;104		_pec0 = 1;		//UART腳位方向規劃		0=OUT 1=IN
+000D	3023	set     PEC0
+000E	0003	ret
+				org	01ch
+				;105	}
+				;106	
+				;107	char PC_RX()//baudrate=9600  PE1
+				;108	{
+				;109		u8 i=0,buff=0;   //資料計數=0，從頭開始
+				;110		while(PE1_Rx);    //等待接收啟始位元
+				;111		GCC_DELAY(T2);     //啟始位元等待1-bit時間
+				;112		GCC_DELAY(T2/2);  //啟始位元再等待1/2-bit時間令資料線上信號較穩定 
+				;113		for(i=0; i<8; i++)  //接收8-bit串列資料
+				;114		{
+				;115			buff=buff >> 1;  //資料緩衝右移1個bit
+				;116			if(PE1_Rx)  buff=buff | 0x80;//若接收的bit=1，則令資料的bit7=1
+				;117			GCC_DELAY(T2-15);  //等待一段時間，接收下一個bit
+				;118		}
+				;119		return buff;
+				;120	}
+				;121	void rx_string()
+				;122	{
+				;123		char w=0;
+				;124		for(w=0;w<10;w++)
+				;125		{
+				;126			output[w] = (char)(PC_RX() & 0x7f);
+				;127			if(output[w]==13) break;
+				;128		}
+				;129	}
+				;130	void PC_TX(char da)//baudrate=9600  PE0
+				;131	{
+				_PC_TX:
+				_PC_TX:
+00AA	4091	mov     da[0], a
+				;132		u8 i=0;   //資料計數=0，從頭開始
+				;133		char buff=da; //讀取列表資料，同時資料計數加一
+				;134		PE0_Tx=0; GCC_DELAY(T2);   //發射啟始位元     
+00AB	34A2	clr     PE1
+00AC	0F31	mov     a, 31H
+00AD	340B	clr     BP0
+00AE	348B	clr     BP1
+00AF	2007	call    L0007
+00B0	340B	clr     BP0
+00B1	348B	clr     BP1
+00B2	0F08	mov     a, 8H
+00B3	4080	mov     ra, a
+				;135		for(i=0; i<8; i++)    //發射8-bit串列資料
+				;136		{
+				;137			if(buff & 0x01) PE0_Tx=1; //若buff資料bit0=1則發射1
+				L00B4:
+00B4	7811	snz     da[0].0
+00B5	28B8	jmp     L00B8
+00B6	30A2	set     PE1
+00B7	28B9	jmp     L00B9
+				;138			else  PE0_Tx=0;         //若buff資料bit0=0則發射0
+				L00B8:
+00B8	34A2	clr     PE1
+				;139			buff >>= 1;           //資料右移換下1個bit
+				L00B9:
+00B9	5A11	rlca    da[0]
+00BA	5B91	rrc     da[0]
+				;140			GCC_DELAY(T2-15);           //延時
+00BB	0F2D	mov     a, 2DH
+00BC	340B	clr     BP0
+00BD	348B	clr     BP1
+00BE	2006	call    L0006
+00BF	340B	clr     BP0
+00C0	348B	clr     BP1
+00C1	5780	sdz     ra
+00C2	28B4	jmp     L00B4
+				;141		}
+				;142		PE0_Tx=1; GCC_DELAY(T2);      //發射停止位元
+00C3	30A2	set     PE1
+00C4	0F31	mov     a, 31H
+00C5	340B	clr     BP0
+00C6	348B	clr     BP1
+00C7	2007	call    L0007
+00C8	340B	clr     BP0
+00C9	348B	clr     BP1
+00CA	0003	ret
+				;143	}
+				;144	void tx_string(char data[])	
+				;145	{
+				;146		char test=0;
+				;147		for(test=0;test<=8;test++)
+				;148		{
+				;149			PC_TX(data[test]);
+				;150		}
+				;151	}
+				;file C:\Users\bet\Desktop\APP 紫外線版\startup1_l.asm
+				;1	;;--------------------------------------------------------------;;
+				;2	;;    This file is part of the Holtek C Compiler V3 package     ;;
+				;3	;;    For the initialization of static linkage variables        ;;
+				;4	;;    Copyright (C) 2013 Holtek Semiconductor Inc.              ;;
+				;5	;;    Version: 1.04 (Above IDE3000 V7.72)                       ;;
+				;6	;;    Date:    2013/12/04                                        ;;
+				;7	;;--------------------------------------------------------------;;
+				;8	
+				;9	acc equ [05h]
+				;10	tblp equ [07h]
+				;11	tblh equ [08h]
+				;12	;;tbhp equ [09h] 
+				;13	mp0 equ [01h]
+				;14	r1 equ [02h]
+				;15	mp1l equ [03h]
+				;16	mp1h equ [04h]
+				;17	z equ [0ah].2
+				;18	c equ [0ah].0
+				;19	
+				;20	ifndef tbhp
+				;21	tbhp equ [09h]
+				;22	endif
+				;23	 
+				;24	extern startup_value_1:near
+				;25	
+				;26	@start .section 'code'
+				;27	begin_startup_value:
+				;28	  mov a,low (offset startup_value_1) 
+				_main_startup1:
+				@start .SECTION 'CODE'
+				begin_startup_value:
+				@start .SECTION 'CODE'
+0087	0F7A	mov     a, 7AH
+				;29	  mov tblp,a
+0088	0087	mov     TBLP, a
+				;30	  mov a,high (offset startup_value_1) 
+0089	0F00	mov     a, 0H
+				;31	  mov tbhp,a
+008A	0089	mov     TBHP, a
+				;32	next_table:
+				;33	  ;CLR WDT
+				;34	  inc tblp
+				next_table:
+008B	1487	inc     TBLP
+				;35	  sz z
+008C	3D0A	sz      Z
+				;36	  inc tbhp
+008D	1489	inc     TBHP
+				;37	  tabrdc mp0
+008E	1D01	tabrd   MP0
+				;38	  sz mp0
+008F	1081	sz      MP0
+				;39	  jmp read_data
+0090	2892	jmp     read_data
+				;40	  jmp end_startup_value
+0091	28A7	jmp     end_startup_value
+				;41	read_data:
+				;42	  inc tblp
+				read_data:
+0092	1487	inc     TBLP
+				;43	  sz z
+0093	3D0A	sz      Z
+				;44	  inc tbhp
+0094	1489	inc     TBHP
+				;45	  tabrdc mp1l
+0095	1D03	tabrd   MP1L
+				;46	  mov a,tblh
+0096	0708	mov     a, TBLH
+				;47	  mov mp1h,a
+0097	0084	mov     MP1H, a
+				;48	next_data:
+				;49	  inc tblp
+				next_data:
+0098	1487	inc     TBLP
+				;50	  sz z
+0099	3D0A	sz      Z
+				;51	  inc tbhp
+009A	1489	inc     TBHP
+				;52	  tabrdc acc
+009B	1D05	tabrd   ACC
+				;53	  mov r1,a
+009C	0082	mov     [02H], a
+				;54	  sdz mp0
+009D	1781	sdz     MP0
+				;55	  jmp $+2
+009E	28A0	jmp     L00A0
+				;56	  jmp next_table
+009F	288B	jmp     next_table
+				;57	  inc mp1l
+				L00A0:
+00A0	1483	inc     MP1L
+				;58	  mov a,tblh
+00A1	0708	mov     a, TBLH
+				;59	  mov r1,a
+00A2	0082	mov     [02H], a
+				;60	  inc mp1l
+00A3	1483	inc     MP1L
+				;61	  sdz mp0
+00A4	1781	sdz     MP0
+				;62	  jmp next_data
+00A5	2898	jmp     next_data
+				;63	  jmp next_table
+00A6	288B	jmp     next_table
+				;64	
+				;65	end_startup_value:
+				;66	
+				;67	   
+				;68	@ROMDATA_BASE .SECTION com_l 'CODE'  
+				;69	startup_value:
+				;70	;;linker range the initial value table here
+				data .SECTION 'DATA'
+				__pe DB DUP (?) ; __pe
+				__pec DB DUP (?) ; __pec
+				__intc0 DB DUP (?) ; __intc0
+				__intc1 DB DUP (?) ; __intc1
+				__wdtc DB DUP (?) ; __wdtc
+				__adcr0 DB DUP (?) ; __adcr0
+				__adcr1 DB DUP (?) ; __adcr1
+				__adrl DB DUP (?) ; __adrl
+				__adrh DB DUP (?) ; __adrh
+				ra DB DUP (?)
+				rb DB DUP (?)
+				rc DB DUP (?)
+				r11c DB DUP (?)
+				r21c DB DUP (?)
+				rb1c DB DUP (?)
+				rc1c DB DUP (?)
+				rd1c DB DUP (?)
+				re1c DB DUP (?)
+				da DB DUP (?) ; da
+				output1 DB DUP (?) ; output1
+				e DB DUP (?) ; e
+				kk DB DUP (?) ; kk
+				output DB DUP (?) ; output
+				r31c DB DUP (?)
+				__pas0 DB DUP (?) ; __pas0

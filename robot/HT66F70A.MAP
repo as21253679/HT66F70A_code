@@ -1,0 +1,185 @@
+
+Linker Version 8.7.3.170508
+Input Object File: C:\Users\SA\Desktop\robot\HT66F70A.OBJ
+Input Object File: C:\Users\SA\Desktop\robot\STARTUP1_L.OBJ
+Input Object File: C:\Users\SA\Desktop\robot\UART.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0002h     003eh    003dh      CODE               @start (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     003fh     0050h    0012h      CODE               @crom (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0051h     005ah    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     005bh     007bh    0021h      CODE               _PC_TX (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     007ch     00c3h    0048h      CODE               _command (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     00c4h     00e3h    0020h      CODE               _PC_RX_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     00e4h     0104h    0021h      CODE               _PC_TX_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0105h     0112h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0113h     0129h    0017h      CODE               _tx_string_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     012ah     0137h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0138h     014ch    0015h      CODE               _Delayms (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     014dh     0152h    0006h      CODE               _UART_init (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0153h     017bh    0029h      CODE               _main (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     017ch     0182h    0007h      CODE               @ROMDATA_BASE (C:\Users\SA\Desktop\robot\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     28        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     17        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     17        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0089h     008ah    0002h      DATA     0         @HCCINIT_f (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     008bh     008ch    0002h      DATA     0         @HCCINIT_g (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     008dh     0090h    0004h      DATA     0         @HCCINIT_output1 (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0091h     00c2h    0032h      DATA     0         @HCCINIT0_output (C:\Users\SA\Desktop\robot\UART.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0089h     0089h    0000h      LOCAL    0         @dummy (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0089h     0089h    0000h      LOCAL    0         _main (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _UART_init (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0084h     0085h    0002h      LOCAL    3         _Delayms (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0083h     0083h    0001h      LOCAL    2         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0088h    0005h      LOCAL    3         _tx_string_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0083h     0083h    0001h      LOCAL    4         _PC_TX_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0000h      LOCAL    0         _PC_RX_115200 (C:\Users\SA\Desktop\robot\UART.OBJ)
+     00h     0084h     0084h    0001h      LOCAL    0         _command (C:\Users\SA\Desktop\robot\HT66F70A.OBJ)
+     00h     0083h     0083h    0001h      LOCAL    4         _PC_TX (C:\Users\SA\Desktop\robot\UART.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0105h              _Crom2Prom
+     0105h              _Crom2PromNext
+     0138h              _Delayms
+     0084h              _Delayms_2
+     00c4h              _PC_RX_115200
+     005bh              _PC_TX
+     00e4h              _PC_TX_115200
+     014dh              _UART_init
+     0054h              __DELAYX0
+     0053h              __DELAYX1
+     0053h              __DELAYX2
+     0052h              __DELAYX3
+     0052h              __DELAYX4
+     0051h              __DELAYX5
+     0051h              __DELAYX6
+     012ch              __DELAYY0_isr00
+     012ch              __DELAYY1_isr00
+     012bh              __DELAYY2_isr00
+     012bh              __DELAYY3_isr00
+     012ah              __DELAYY4_isr00
+     012ah              __DELAYY5_isr00
+     007ch              _command
+     0089h              _f
+     008bh              _g
+     0153h              _main
+     0091h              _output
+     008dh              _output1
+     0113h              _tx_string_115200
+     0086h              _tx_string_115200_2
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     017ch              startup_value_1
+
+     Address            Public by Value
+     0051h              __DELAYX5
+     0051h              __DELAYX6
+     0052h              __DELAYX3
+     0052h              __DELAYX4
+     0053h              __DELAYX1
+     0053h              __DELAYX2
+     0054h              __DELAYX0
+     005bh              _PC_TX
+     007ch              _command
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0084h              _Delayms_2
+     0086h              _tx_string_115200_2
+     0089h              _f
+     008bh              _g
+     008dh              _output1
+     0091h              _output
+     00c4h              _PC_RX_115200
+     00e4h              _PC_TX_115200
+     0105h              _Crom2Prom
+     0105h              _Crom2PromNext
+     0113h              _tx_string_115200
+     012ah              __DELAYY4_isr00
+     012ah              __DELAYY5_isr00
+     012bh              __DELAYY2_isr00
+     012bh              __DELAYY3_isr00
+     012ch              __DELAYY0_isr00
+     012ch              __DELAYY1_isr00
+     0138h              _Delayms
+     014dh              _UART_init
+     0153h              _main
+     017ch              startup_value_1
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0183h    4%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     Total     8000h     0183h    1%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0043h    52%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     Total     0800h     0043h    3%
+
+Use Stack Count
+_main: 3
+_rx_string: 2
+_tx_string: 2
+_rx_string_115200: 2
+
+Call Tree
+    @dummy
+        _main (0)
+            _UART_init (1)
+            _Delayms (1)
+                _builtin_holtek_delay_isr00 (2)
+            _tx_string_115200 (1)
+                _Crom2Prom (2)
+                _PC_TX_115200 (2)
+                    __DELAYX (3)
+            _PC_RX_115200 (1)
+                __DELAYX (2)
+            _command (1)
+                _PC_TX (2)
+                    __DELAYX (3)
+    _rx_string
+        _PC_RX (0)
+            __DELAYX (1)
+    _tx_string
+        _Crom2Prom (0)
+        _PC_TX (0)
+            __DELAYX (1)
+    _rx_string_115200
+        _PC_RX_115200 (0)
+            __DELAYX (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\SA\Desktop\robot\HT66F70A.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

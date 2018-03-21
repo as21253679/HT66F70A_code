@@ -1,0 +1,268 @@
+
+Linker Version 8.7.3.170508
+Input Object File: C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ
+Input Object File: C:\Users\SA\Desktop\VR回饋TIMER\STARTUP1_L.OBJ
+Input Object File: C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0002h     0005h    0004h      CODE               _UART_init (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     0008h     000bh    0004h      CODE               @ISR_UART_code (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0014h     0017h    0004h      CODE               @ISR_TIMER_code (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0018h     0075h    005eh      CODE               _ISR_UART (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     007ah     00deh    0065h      CODE               _ISR_TIMER (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     00dfh     011bh    003dh      CODE               @start (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     011ch     0146h    002bh      CODE               @crom (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0147h     0167h    0021h      CODE               _LED_change (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0168h     0171h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0172h     0184h    0013h      CODE               _LED_Delay (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0185h     01e4h    0060h      CODE               _LED (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     01e5h     0205h    0021h      CODE               _PC_TX (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     0206h     0213h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0214h     022ah    0017h      CODE               _tx_string (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     022bh     0238h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0239h     024dh    0015h      CODE               _Delayms (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     024eh     0260h    0013h      CODE               _GPIO_init (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0261h     02a1h    0041h      CODE               _main (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     02a2h     02bfh    001eh      CODE               _PC_RX (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     02c0h     02cbh    000ch      CODE               @ROMDATA_BASE (C:\Users\SA\Desktop\VR回饋TIMER\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     16        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     18        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     20        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     2         @data_r108 (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     2         @data_r208 (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     2         @data_r114 (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_r214 (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_rb08 (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     4         @data_ra08 (isr:ra~rh)
+     00h     0091h     0091h    0001h      DATA     7         @HCCINIT_s (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0092h     0093h    0002h      DATA     5         @HCCINIT_r3 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0094h     0095h    0002h      DATA     5         @HCCINIT_r2 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0096h     0097h    0002h      DATA     4         @HCCINIT_r1 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0098h     0099h    0002h      DATA     4         @HCCINIT_ff (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     009ah     009bh    0002h      DATA     4         @HCCINIT_dd (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     009ch     009dh    0002h      DATA     4         @HCCINIT_gg (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     009eh     009eh    0001h      DATA     4         @HCCINIT_s2 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     009fh     00a2h    0004h      DATA     0         @HCCINIT_output1 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     00a3h     00d4h    0032h      DATA     0         @HCCINIT0_output (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     00d5h     00d5h    0001h      DATA     2         @data_r308 (isr:ra~rh)
+     00h     00d6h     00d6h    0001h      DATA     2         @data_r408 (isr:ra~rh)
+     00h     00d7h     00d7h    0001h      DATA     2         @data_r508 (isr:ra~rh)
+     00h     00d8h     00d8h    0001h      DATA     2         @data_r608 (isr:ra~rh)
+     00h     00d9h     00d9h    0001h      DATA     2         @data_r708 (isr:ra~rh)
+     00h     00dah     00dah    0001h      DATA     2         @data_r314 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ah     008ah    0000h      LOCAL    0         @dummy8 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0089h     0089h    0001h      LOCAL    7         _ISR_UART (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0089h     0089h    0000h      LOCAL    0         _PC_RX (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     0089h     0089h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0089h     0089h    0000h      LOCAL    0         @dummy20 (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0089h     0089h    0000h      LOCAL    0         _ISR_TIMER (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0091h     0091h    0000h      LOCAL    0         @dummy (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     0091h     0091h    0000h      LOCAL    0         _main (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _UART_init (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _GPIO_init (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     008bh     008ch    0002h      LOCAL    5         _Delayms (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     008ah     008ah    0001h      LOCAL    2         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008bh     008fh    0005h      LOCAL    3.8       _tx_string (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     008ah     008ah    0001h      LOCAL    4         _PC_TX (C:\Users\SA\Desktop\VR回饋TIMER\UART.OBJ)
+     00h     008ch     0090h    0005h      LOCAL    6.8       _LED (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     008ah     008bh    0002h      LOCAL    7         _LED_Delay (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _LED_change (C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0206h              _Crom2Prom
+     0206h              _Crom2PromNext
+     0239h              _Delayms
+     008ch              _Delayms_2
+     024eh              _GPIO_init
+     007ah              _ISR_TIMER
+     0018h              _ISR_UART
+     0185h              _LED
+     0172h              _LED_Delay
+     008ah              _LED_Delay_2
+     0147h              _LED_change
+     02a2h              _PC_RX
+     01e5h              _PC_TX
+     0002h              _UART_init
+     016bh              __DELAYX0
+     016ah              __DELAYX1
+     016ah              __DELAYX2
+     0169h              __DELAYX3
+     0169h              __DELAYX4
+     0168h              __DELAYX5
+     0168h              __DELAYX6
+     022dh              __DELAYY0_isr00
+     022dh              __DELAYY1_isr00
+     022ch              __DELAYY2_isr00
+     022ch              __DELAYY3_isr00
+     022bh              __DELAYY4_isr00
+     022bh              __DELAYY5_isr00
+     009ah              _dd
+     0098h              _ff
+     009ch              _gg
+     0261h              _main
+     00a3h              _output
+     009fh              _output1
+     0096h              _r1
+     0094h              _r2
+     0092h              _r3
+     0091h              _s
+     009eh              _s2
+     0214h              _tx_string
+     0083h              r108
+     0085h              r114
+     0084h              r208
+     0086h              r214
+     00d5h              r308
+     00dah              r314
+     00d6h              r408
+     00d7h              r508
+     00d8h              r608
+     00d9h              r708
+     0080h              ra
+     0088h              ra08
+     0081h              rb
+     0087h              rb08
+     0082h              rc
+     02c0h              startup_value_1
+
+     Address            Public by Value
+     0002h              _UART_init
+     0018h              _ISR_UART
+     007ah              _ISR_TIMER
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              r108
+     0084h              r208
+     0085h              r114
+     0086h              r214
+     0087h              rb08
+     0088h              ra08
+     008ah              _LED_Delay_2
+     008ch              _Delayms_2
+     0091h              _s
+     0092h              _r3
+     0094h              _r2
+     0096h              _r1
+     0098h              _ff
+     009ah              _dd
+     009ch              _gg
+     009eh              _s2
+     009fh              _output1
+     00a3h              _output
+     00d5h              r308
+     00d6h              r408
+     00d7h              r508
+     00d8h              r608
+     00d9h              r708
+     00dah              r314
+     0147h              _LED_change
+     0168h              __DELAYX6
+     0168h              __DELAYX5
+     0169h              __DELAYX4
+     0169h              __DELAYX3
+     016ah              __DELAYX2
+     016ah              __DELAYX1
+     016bh              __DELAYX0
+     0172h              _LED_Delay
+     0185h              _LED
+     01e5h              _PC_TX
+     0206h              _Crom2PromNext
+     0206h              _Crom2Prom
+     0214h              _tx_string
+     022bh              __DELAYY4_isr00
+     022bh              __DELAYY5_isr00
+     022ch              __DELAYY2_isr00
+     022ch              __DELAYY3_isr00
+     022dh              __DELAYY0_isr00
+     022dh              __DELAYY1_isr00
+     0239h              _Delayms
+     024eh              _GPIO_init
+     0261h              _main
+     02a2h              _PC_RX
+     02c0h              startup_value_1
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     02beh    8%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     Total     8000h     02beh    2%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     005bh    71%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     Total     0800h     005bh    4%
+
+Use Stack Count
+_ISR_UART: 2
+_ISR_TIMER: 0
+_main: 3
+_rx_string: 2
+_rx_string_115200: 2
+_tx_string_115200: 2
+
+Call Tree
+    @dummy8
+        _ISR_UART (0)
+            _PC_RX (1)
+                __DELAYX (2)
+    @dummy20
+        _ISR_TIMER (0)
+    @dummy
+        _main (0)
+            _UART_init (1)
+            _GPIO_init (1)
+            _Delayms (1)
+                _builtin_holtek_delay_isr00 (2)
+            _tx_string (1)
+                _Crom2Prom (2)
+                _PC_TX (2)
+                    __DELAYX (3)
+            _LED (1)
+                _LED_Delay (2)
+                    __DELAYX (3)
+                _LED_change (2)
+    _rx_string
+        _PC_RX (0)
+            __DELAYX (1)
+    _rx_string_115200
+        _PC_RX_115200 (0)
+            __DELAYX (1)
+            __DELAY (1)
+    _tx_string_115200
+        _Crom2Prom (0)
+        _PC_TX_115200 (0)
+            __DELAYX (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\SA\Desktop\VR回饋TIMER\HT66F70A.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

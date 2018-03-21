@@ -1,0 +1,166 @@
+
+Linker Version 8.7.1.160708
+Input Object File: C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ
+Input Object File: C:\Users\bet\Desktop\HT66F70A_震動\STARTUP1_L.OBJ
+Input Object File: C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0002h     0024h    0023h      CODE               @start (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0025h     002ah    0006h      CODE               @crom (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     002bh     0038h    000eh      CODE               _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0039h     004dh    0015h      CODE               _Delayms (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     004eh     0057h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0058h     0078h    0021h      CODE               _PC_TX (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     0079h     0086h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0087h     009ah    0014h      CODE               _tx_string (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     009bh     00bah    0020h      CODE               _PC_RX (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     00bbh     00bdh    0003h      CODE               _GPIO_init (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     00beh     00c0h    0003h      CODE               _UART_init (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     00c1h     00e9h    0029h      CODE               _main (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     00eah     00eeh    0005h      CODE               @ROMDATA_BASE (C:\Users\bet\Desktop\HT66F70A_震動\STARTUP1_L.OBJ)
+     00h     0080h     0080h    0001h      DATA     12        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     11        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     9         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0088h     008bh    0004h      DATA     0.25      @HCCINIT_output1 (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     008ch     00bdh    0032h      DATA     0         @HCCINIT0_output (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0088h     0088h    0000h      LOCAL    0         @dummy (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _main (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _UART_init (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _GPIO_init (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _PC_RX (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0087h    0004h      LOCAL    2.75      _tx_string (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     0083h     0083h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0083h     0083h    0001h      LOCAL    4         _PC_TX (C:\Users\bet\Desktop\HT66F70A_震動\UART.OBJ)
+     00h     0084h     0085h    0002h      LOCAL    2         _Delayms (C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ)
+     00h     0083h     0083h    0001h      LOCAL    2         _builtin_holtek_delay_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V7.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0079h              _Crom2Prom
+     0079h              _Crom2PromNext
+     0039h              _Delayms
+     0084h              _Delayms_2
+     00bbh              _GPIO_init
+     009bh              _PC_RX
+     0058h              _PC_TX
+     00beh              _UART_init
+     0051h              __DELAYX0
+     0050h              __DELAYX1
+     0050h              __DELAYX2
+     004fh              __DELAYX3
+     004fh              __DELAYX4
+     004eh              __DELAYX5
+     004eh              __DELAYX6
+     002dh              __DELAYY0_isr00
+     002dh              __DELAYY1_isr00
+     002ch              __DELAYY2_isr00
+     002ch              __DELAYY3_isr00
+     002bh              __DELAYY4_isr00
+     002bh              __DELAYY5_isr00
+     00c1h              _main
+     008ch              _output
+     0088h              _output1
+     0087h              _tx_string
+     0086h              _tx_string_2
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     00eah              startup_value_1
+
+     Address            Public by Value
+     002bh              __DELAYY4_isr00
+     002bh              __DELAYY5_isr00
+     002ch              __DELAYY2_isr00
+     002ch              __DELAYY3_isr00
+     002dh              __DELAYY0_isr00
+     002dh              __DELAYY1_isr00
+     0039h              _Delayms
+     004eh              __DELAYX5
+     004eh              __DELAYX6
+     004fh              __DELAYX3
+     004fh              __DELAYX4
+     0050h              __DELAYX1
+     0050h              __DELAYX2
+     0051h              __DELAYX0
+     0058h              _PC_TX
+     0079h              _Crom2PromNext
+     0079h              _Crom2Prom
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0084h              _Delayms_2
+     0086h              _tx_string_2
+     0087h              _tx_string
+     0088h              _output1
+     008ch              _output
+     009bh              _PC_RX
+     00bbh              _GPIO_init
+     00beh              _UART_init
+     00c1h              _main
+     00eah              startup_value_1
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     00efh    2%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     Total     8000h     00efh    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     003eh    48%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     Total     0800h     003eh    3%
+
+Use Stack Count
+_main: 3
+_rx_string: 2
+
+Call Tree
+    @dummy
+        _main (0)
+            _UART_init (1)
+            _GPIO_init (1)
+            _PC_RX (1)
+                __DELAYX (2)
+            _tx_string (1)
+                _Crom2Prom (2)
+                _PC_TX (2)
+                    __DELAYX (3)
+            _PC_TX (1)
+                __DELAYX (2)
+            _Delayms (1)
+                _builtin_holtek_delay_isr00 (2)
+    _rx_string
+        _PC_RX (0)
+            __DELAYX (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\bet\Desktop\HT66F70A_震動\HT66F70A.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
